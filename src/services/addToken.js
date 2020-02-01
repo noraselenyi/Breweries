@@ -2,7 +2,7 @@
 const jwt = require("jsonwebtoken");
 
 const addToken = (userdata) => {
-  let token = jwt.sign({ userdata }, 'supersecret', { expiresIn: '60s'});
+  let token = jwt.sign({ userdata }, 'supersecret', { expiresIn: '6000s'});
   return token
 };
 

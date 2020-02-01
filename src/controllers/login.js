@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-const { searchUsernameAndPassword } = require("../services/search_un_and_pw");
-const { addToken } = require("../services/addToken-service");
+const { searchUsernameAndPassword } = require("../services/search-un-and-pw");
+const { addToken } = require("../services/addToken");
 
 
 const userLogin = (req, res) => {

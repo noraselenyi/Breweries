@@ -3,9 +3,11 @@
 const express = require("express");
 const router = express.Router();
 
-const { userLogin } = require("../controllers/login-controller");
+const { userLogin } = require("../controllers/login");
+const { getBreweries } = require("../controllers/getbreweries");
 
 router.post("/login", userLogin);
+router.get("/breweries", getBreweries);
 
 
 
