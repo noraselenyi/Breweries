@@ -3,7 +3,10 @@ require("dotenv").config();
 const un = process.env.username;
 const pw = process.env.password;
 
+const data = { username: un, password: pw }
+
 const { searchUsernameAndPassword } = require("../src/services/search-un-and-pw");
+const { addToken } = require("../src/services/addToken");
 const chai = require("chai");
 const chaiAsPromised = require("chai-as-promised");
 
@@ -45,4 +48,16 @@ describe('Checking login', () => {
     .should.become(
       { username: un,
         password: pw }))
+});
+
+
+
+describe('Checking token', () => {
+  it('token can be created', () =>
+    addToken(data)
+      .should.not.equal(null));
+
+  it('token should be a string', () =>
+    addToken()
+      .should.be.a('string'));
 });

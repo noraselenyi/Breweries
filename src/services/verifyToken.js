@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const jwt = require("jsonwebtoken");
 
-const verfyToken = (bearer) => new Promise((resolve, reject) => {
+const verifyToken = (bearer) => new Promise((resolve, reject) => {
   jwt.verify(bearer, 'supersecret', (err, data) => {
     if (err) {
       if (err.name === 'TokenExpiredError') {
@@ -13,4 +13,4 @@ const verfyToken = (bearer) => new Promise((resolve, reject) => {
     }})
 });
 
-module.exports = { verfyToken };
+module.exports = { verifyToken };
