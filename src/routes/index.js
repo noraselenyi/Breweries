@@ -9,6 +9,4 @@ const { getBreweries } = require("../controllers/getbreweries");
 router.post("/login", userLogin);
 router.get("/breweries", getBreweries);
 
-
-
 module.exports = router;

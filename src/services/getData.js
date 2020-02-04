@@ -2,7 +2,7 @@
 const fetch = require('node-fetch');
 
 const getdata = (queryparam) => {
-  let searchFor = '';
+    let searchFor = '';
 
   if (queryparam !== '') {
     searchFor = `/search?query=${queryparam}`
