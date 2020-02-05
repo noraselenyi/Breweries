@@ -28,19 +28,19 @@ describe('Checking login', () => {
 
   it('empty username and password', () =>
     searchUsernameAndPassword('', '')
-    .should.be.rejectedWith('Username or password incorrect.'));
+      .should.be.rejectedWith('Username or password incorrect.'));
 
   it('empty username', () =>
   searchUsernameAndPassword('', 'NewPassword')
-  .should.be.rejectedWith('Username or password incorrect.'));
+    .should.be.rejectedWith('Username or password incorrect.'));
 
   it('empty password', () =>
   searchUsernameAndPassword('NewUser', '')
-  .should.be.rejectedWith('Username or password incorrect.'));
+    .should.be.rejectedWith('Username or password incorrect.'));
 
   it('undefined inputs', () =>
   searchUsernameAndPassword(undefined, undefined)
-  .should.be.rejectedWith('Username or password incorrect.'));
+    .should.be.rejectedWith('Username or password incorrect.'));
 
 
   it('all fields are correct', () =>

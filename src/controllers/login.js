@@ -2,7 +2,6 @@
 const { searchUsernameAndPassword } = require("../services/search-un-and-pw");
 const { addToken } = require("../services/addToken");
 
-
 const userLogin = (req, res) => {
   const { username, password } = req.body;
 

@@ -5,7 +5,6 @@ const request = require('supertest');
 const chaiAsPromised = require('chai-as-promised');
 
 chai.use(chaiAsPromised);
-
 const { expect } = chai;
 
 describe('Get brewerties test', () => {
@@ -20,8 +19,9 @@ describe('Get brewerties test', () => {
         expect(res.status).to.equal(200);
         expect(res.text).not.to.equal(null);
         done(err);
-      });
+    })
   });
+
 
   it('/breweries succcess', (done) => {
     request(app)
@@ -30,8 +30,9 @@ describe('Get brewerties test', () => {
       .end((err, res) => {
         expect(res.status).to.equal(200);
         done(err);
-      });
+    })
   });
+
 
   it('/breweries with wrong token', (done) => {
     request(app)
@@ -41,7 +42,7 @@ describe('Get brewerties test', () => {
         expect(res.status).to.equal(401);
         expect(res.text).to.equal('Token is not right :(');
         done(err);
-      });
+    })
   });
 
 
@@ -53,7 +54,7 @@ describe('Get brewerties test', () => {
         expect(res.status).to.equal(401);
         expect(res.text).to.equal('Token is not right :(');
         done(err);
-      });
+    })
   });
 
 
@@ -66,7 +67,7 @@ describe('Get brewerties test', () => {
         expect(res.body).not.to.be.null;
         expect(res.body[0]).to.have.property('id')
         done(err);
-      });
+    })
   });
 
 
@@ -77,7 +78,6 @@ describe('Get brewerties test', () => {
       .end((err, res) => {
         expect(res.status).to.equal(404);
         done(err);
-      });
+    })
   });
-
 });
