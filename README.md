@@ -9,13 +9,12 @@ To start, please:
 
 
 For getting a valid token on POST /login, please send this in the body:
-
+```
 {
-	"username": "NewUser",
-	
-	"password": "NewPassword"
+"username": "NewUser",
+"password": "NewPassword"
 }
-
+```
 
 For getting the list of breweries on GET /breweries:
 - provide a valid token after "Bearer "
